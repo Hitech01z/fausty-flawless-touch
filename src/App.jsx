@@ -11,6 +11,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 <WhatsAppButton />
 
 
+
 export default function App() {
   return (
     <Router>
@@ -29,3 +30,7 @@ export default function App() {
     </Router>
   );
 }
+import StickyCTA from './components/StickyCTA';
+
+<StickyCTA />
+

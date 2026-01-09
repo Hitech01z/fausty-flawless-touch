@@ -1,36 +1,70 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thank you, ${form.name}! We received your message.`);
-    setForm({ name: '', email: '', message: '' });
-  };
-
   return (
-    <div className="max-w-3xl mx-auto py-16 px-4">
-      <h2 className="text-3xl font-bold text-pink-700 mb-8 text-center">Contact Us</h2>
-      <form onSubmit={handleSubmit} className="bg-white shadow-lg rounded-lg p-8 space-y-4">
-        <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Your Name" className="w-full p-3 border border-gray-300 rounded-lg" required />
-        <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="Your Email" className="w-full p-3 border border-gray-300 rounded-lg" required />
-        <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your Message" className="w-full p-3 border border-gray-300 rounded-lg" rows="5" required></textarea>
-        <button type="submit" className="bg-pink-700 text-white px-6 py-3 rounded-lg hover:bg-pink-900 transition">Send Message</button>
-      </form>
-      <div className="mt-12 rounded-xl overflow-hidden shadow-lg">
-  <iframe
-    src="https://www.google.com/maps?q=169%20Adetokunbo%20Ademola%20Cres,%20Wuse%202,%20Abuja&output=embed"
-    width="100%"
-    height="350"
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
+    <section className="max-w-4xl mx-auto py-12 sm:py-16 px-4">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-pink-700 mb-10">
+        Contact Us
+      </h2>
 
-    </div>
+      {/* Form */}
+      <form className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 space-y-6">
+        {/* Name */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Full Name
+          </label>
+          <input
+            type="text"
+            placeholder="Enter your full name"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3
+              bg-white text-gray-900 placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-pink-500"
+          />
+        </div>
+
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Email Address
+          </label>
+          <input
+            type="email"
+            placeholder="example@email.com"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3
+              bg-white text-gray-900 placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-pink-500"
+          />
+        </div>
+
+        {/* Message */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Message
+          </label>
+          <textarea
+            rows="5"
+            placeholder="Tell us the service you need and your event date"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3
+              bg-white text-gray-900 placeholder-gray-400
+              focus:outline-none focus:ring-2 focus:ring-pink-500"
+          />
+        </div>
+
+        {/* Button */}
+        <button
+          type="submit"
+          className="w-full sm:w-auto bg-pink-600 text-white px-8 py-3
+            rounded-full font-semibold hover:bg-pink-700 transition"
+        >
+          Send Message
+        </button>
+      </form>
+
+      {/* Contact Info */}
+      <div className="mt-10 text-center text-gray-700 space-y-2 text-sm sm:text-base">
+        <p>📍 169 Adetokunbo Ademola Cres, Wuse 2, Abuja</p>
+        <p>📞 0902 340 8863</p>
+        <p>⭐ 5.0 Rating (53 Reviews)</p>
+      </div>
+    </section>
   );
 }

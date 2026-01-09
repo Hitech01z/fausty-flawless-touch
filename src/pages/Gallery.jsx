@@ -24,8 +24,11 @@ export default function Gallery() {
           >
             <img
               src={img}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-72 object-cover"
               alt="Makeup work"
-              className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+
             />
           </div>
         ))}
