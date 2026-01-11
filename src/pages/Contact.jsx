@@ -60,7 +60,7 @@ export default function Contact() {
       </form>
 
       {/* Contact Info */}
-      <div className="mt-10 text-center text-gray-700 space-y-2 text-sm sm:text-base">
+      <div className="mt-10 text-center text-gray-1000 space-y-2 text-sm sm:text-base">
         <p>📍 169 Adetokunbo Ademola Cres, Wuse 2, Abuja</p>
         <p>📞 0902 340 8863</p>
         <p>⭐ 5.0 Rating (53 Reviews)</p>
